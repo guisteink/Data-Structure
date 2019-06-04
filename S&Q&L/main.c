@@ -416,6 +416,23 @@ lista *listatolevel(bintree *root, lista *l) {
 	return l;
 }
 
+//13) RECONSTRUIR UMA BT, DADOS SEUS PERCURSOS INORDER E POSORDER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //********************************************************************************************
 //-------------------------------- PROGRAMA PRINCIPAL ----------------------------------------
 int main() {
@@ -435,26 +452,37 @@ int main() {
 	tnode *p5 = createnode(d5);
 
 //----------------------------------------- TESTE DAS FUNCOES DE STACK -------------------------------------
+	// testar separado, comentando os outros tad
+
+
 	stack *stk = createstack(p1);
 	stk = push(stk, p2);
 	stk = push(stk, p3);
 	stk = push(stk, p4);
+	tnode *temp = p4;
 	stk = pop(stk);
 	stk = push(stk, p5);
 
 	printstack(stk);
 
+	p4 = temp;
 //------------------------------------------ TESTE DA FUNCOES DE FILA -----------------------------------
+	// testar separado, comentando os outros tad
 	queue *q = createqueue(p1);
 	q = insert(q, p2);
 	q = insert(q, p3);
 	q = insert(q, p4);
 	q = insert(q, p5);
+	tnode *temp2 = p5;
 	q = delete(q);
+
 
 	printqueue(q);
 
+	p5 = temp2;
+
 //------------------------------------------ TESTE DA FUNCOES DE LISTA -----------------------------------
+	// testar separado, comentando os outros tad
 	lista *l = crialista(d1);
 	l = insereini(l, d2);
 	l = inserefim(l, d3);
@@ -462,6 +490,7 @@ int main() {
 	l = insereini(l, d5);
 	l = deletefim(l);
 	l = deleteini(l);
+
 
 	printlista(l);
 
